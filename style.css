@@ -1,0 +1,158 @@
+* {
+	margin: 0;
+	padding: 0;
+	
+}
+
+body {
+	display: flex;
+	margin: 15px;
+	justify-content: center;
+	font-size: 1rem;
+	margin: 25px;
+	line-height: 1;
+	background-color: #FFF3C3;
+
+}
+
+*::before, *::after {
+box-sizing: border-box;
+}
+
+.card-demo {
+	display: flex;
+	background-color: #fff;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	min-height: 120px;
+}
+
+.cards-grid {
+	display: grid;
+	margin: 0 auto;
+	gap: 20px;
+	text-transform: uppercase;
+	grid-template-columns: repeat(4, minmax(200px, 260px));
+	grid-template-rows: repeat(4, 180px);
+	grid-template-rows: 300px;
+	margin-bottom: 100px;
+
+	grid-template-areas: 
+		"wide1 wide1 product1 product2"
+		"wide2 wide2 product1 product2"
+		"product3 product4 wide3 wide3"
+		"product3 product4 wide4 wide4";
+}
+
+.df {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.plus-sale {
+	display: flex;
+	width: 30px;
+	height: 30px;
+}
+
+.button-info-book-wite {
+	margin: 0 auto;
+	width: 176px;
+	height: 55px;
+	display: block;
+	cursor: pointer;
+	margin-top: -2px;
+	border-radius: 30px;
+	border: none;
+	background: #2e2c2c;
+	color: #fff;
+	box-shadow: 0px 4px 4px 0px rgba(141, 127, 127, 0.25);
+	font-family: 'Didact';
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  }
+
+  .calc-price {
+    padding: 30px 50px;
+    /* border: 10px solid #7ac5ea; */
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(218, 243, 255);
+    background-color: white;
+    box-shadow: -10px 0px 25px rgba(143, 179, 195, 0.685);
+    z-index: 10;
+}
+
+.calc-price-title {
+	font-size: 22px;
+	font-weight: 700;
+	margin-bottom: 10px;
+	font-family: 'SANTELLO', sans-serif;
+}
+
+.calc-price-value {
+	font-size: 20px;
+	font-weight: 300;
+}
+
+.calc-price-text {
+	display: inline-block;
+}
+@media (max-width: 889px) {
+	.cards-grid {
+		grid-template-columns: repeat(2, minmax(180px, 260px));
+		grid-template-rows: repeat(8, 180px);
+		grid-template-areas: 
+			'wide1 wide1'
+			'wide2 wide2'
+			'product1 product2'
+			'product1 product2'
+			'wide3 wide3'
+			'wide4 wide4'
+			'product3 product4'
+			'product3 product4'
+		;
+	}
+}
+
+@media (max-width: 409px) {
+	.cards-grid {
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(12,140px);
+		width: 100%;
+
+		grid-template-areas: 
+			'wide1'
+			'wide2'
+			'product1'
+			'product1'
+			'product2'
+			'product2'
+			'wide3'
+			'wide4'
+			'product3'
+			'product3'
+			'product4'
+			'product4'
+		;
+	}
+}
+
+.sale-1 { grid-area: wide1; }
+.sale-2 { grid-area: wide2; }
+.product-1  { grid-area: product1; } 
+.product-2  { grid-area: product2; } 
+.product-3  { grid-area: product3; } 
+.product-4  { grid-area: product4; } 
+.sale-3 { grid-area: wide3; }
+.sale-4 { grid-area: wide4; }
