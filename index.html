@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="Fonts/SANTELLO.ttf">
+    <link rel="stylesheet" href="Fonts/LICENSE.txt">
+    <link rel="stylesheet" href="normalize.css">
     <link rel="stylesheet" href="style.css">    
     <script src="script.js" defer></script>
 
@@ -12,34 +18,70 @@
     <div class="cards-grid">
         <div class="card-demo sale-1 df">
             <h4>Индивидуальный фильм</h4>
-            <input type="checkbox" id="film" alt="" src="./img/plus.svg" class="plus-sale" value="60000" name="ceiling"/>
+            <input type="checkbox" id="film" alt="" class="custom-checkbox" value="50000" name="ceiling"/>
+            <label for="film"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+
 
         </div>
         <div class="card-demo sale-2 df">
-            <h4>Большая биолграфическая книга</h4>
-            <input type="checkbox" src="./img/plus.svg" id="big-book" alt="" class="plus-sale" value="30000" name="walls"/>
+            <h4>Биография в книге</h4>
+            <input type="checkbox" id="big-book" alt="" class="custom-checkbox" value="100000" name="walls"/>
+            <label for="big-book"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
         </div>
 
         <div class="card-demo product-1 df">
             <h4>Минибук воспоминаний</h4>
-            <input type="checkbox" src="./img/plus.svg" id="mini-book" alt="" class="plus-sale" value="10000" name="floor"/>
+            <input type="checkbox" id="mini-book" alt="" class="custom-checkbox" value="10000" name="floor"/>
+            <label for="mini-book"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
         </div>
-        <div class="card-demo product-2">Сканирование фото</div>
 
-        <div class="card-demo sale-3">Слайд-шоу</div>
-        <div class="card-demo sale-4">Фотокнига</div>
-        <div class="card-demo product-3">Интервью видеозапись</div>
-        <div class="card-demo product-4">Интервью с расшифровкой</div>
+
+        <div class="card-demo product-2 df">
+            <h4>Сканирование фото</h4>
+            <input type="checkbox" id="scan-foto" alt="" class="custom-checkbox" value="15000" name="scan"/>
+            <label for="scan-foto"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+        </div>
+
+        <div class="card-demo sale-3 df">
+            <h4>Слайд-шоу</h4>
+            <input type="checkbox" id="slide-show" alt="" class="custom-checkbox" value="2000" name="slide"/>
+            <label for="slide-show"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+        </div>
+        <div class="card-demo sale-4 df">
+            <h4>Фотокнига</h4>
+            <input type="checkbox" id="foto-book" alt="" class="custom-checkbox" value="20000" name="fotobook"/>
+            <label for="foto-book"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+        </div>
+        <div class="card-demo product-3 df">
+            <h4>Интервью видеоролик</h4>
+            <input type="checkbox" id="interview-video" alt="" class="custom-checkbox" value="12000" name="interview"/>
+            <label for="interview-video"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+        </div>
+        <div class="card-demo product-4 df">
+            <h4>Интервью-текст</h4>
+            <input type="checkbox" id="interview-text" alt="" class="custom-checkbox" value="40000" name="interview-text"/>
+            <label for="interview-text"></label>
+            <a href="#"><img src="img/arrow-bold.svg" width="40px" height="40px" alt=""></a>
+        </div>
     </div>
 
     <div class="calc-price">
-        <div class="calc-price-title">Вы выбрали:</div>
-        <input id="target" disabled></input>
+        <div class="calc-price-title">Примерная стоимость составит:</div>
+        <!-- <input id="target" disabled></input> -->
 
         <div class="calc-price-value">
-            <span id="total-price">0</span>
-            рублей
+           от <span id="total-price">0</span>
+           ₽
         </div>
+        <br>
+        <p>Выбрали услугу? Напишите нам!</p>
     </div>
 
 
