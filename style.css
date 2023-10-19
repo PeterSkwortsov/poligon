@@ -52,23 +52,36 @@ box-sizing: border-box;
 	min-height: 120px;
 }
 
+
+
 .cards-grid {
 	display: grid;
 	margin: 0 auto;
 	gap: 20px;
 	text-transform: uppercase;
-	grid-template-columns: repeat(4, minmax(200px, 260px));
-	grid-template-rows: repeat(4, 180px);
-	grid-template-rows: 300px;
+	grid-template-columns: repeat(4, minmax(200px, 280px));
+	grid-template-rows: repeat(4, 250px);
+	/* grid-template-rows: 300px; */
 	margin-bottom: 100px;
 
 	grid-template-areas: 
-		"wide1 wide1 product1 product2"
-		"wide2 wide2 product1 product2"
-		"product3 product4 wide3 wide3"
-		"product3 product4 wide4 wide4";
-		margin-bottom: 150px;
+	"product3 product1 product1 product2"
+	"wide2 wide2 wide3 wide3"
+	"wide2 wide2 wide3 wide3"
+	"wide1 product4 product4 wide4";
+		margin-bottom: 120px;
 }
+/* .sale-1 {  wide1;
+.sale-2 { grid-area: wide2;
+.product-1  { grid-area: product1;
+.product-2  { grid-area: product2;
+.product-3  { grid-area: product3; 
+.product-4  { grid-area: product4; 
+.sale-3 { grid-area: wide3; 
+.sale-4 { grid-area: wide4; 
+
+ */
+
 
 h4 {
 	font-family: 'SANTELLO', sans-serif;
@@ -176,7 +189,7 @@ h4 {
   }
 
   .calc-price {
-    padding: 20px 50px;
+    padding: 20px 25px;
     /* border: 10px solid #7ac5ea; */
     position: fixed;
     left: 0;
@@ -212,16 +225,18 @@ h4 {
 	  }
 	.cards-grid {
 		grid-template-columns: repeat(2, minmax(180px, 260px));
-		grid-template-rows: repeat(8, 180px);
+		grid-template-rows: repeat(10, 180px);
 		grid-template-areas: 
 			'wide1 wide1'
+			'wide2 wide2'
 			'wide2 wide2'
 			'product1 product2'
 			'product1 product2'
 			'wide3 wide3'
+			'wide3 wide3'
 			'wide4 wide4'
-			'product3 product4'
-			'product3 product4'
+			'product3 product3'
+			'product4 product4'
 		;
 	}
 }
@@ -239,10 +254,10 @@ h4 {
 
 		grid-template-areas: 
 			'wide1'
+			'wide1'
+			'wide2'
 			'wide2'
 			'product1'
-			'product1'
-			'product2'
 			'product2'
 			'wide3'
 			'wide4'
@@ -266,6 +281,10 @@ h4 {
 	background-image: url(img/blur/04.jpg);
 	background-repeat: no-repeat;
 	background-size: cover; 
+	border: 8px solid #fff;
+	-webkit-box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
+	-moz-box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
+	box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
 }
 
 .product-1  { grid-area: product1;
@@ -287,9 +306,16 @@ background-size: cover;
 	background-repeat: no-repeat;
 	background-size: cover;} 
 .sale-3 { grid-area: wide3; 
+	border: 8px solid #fff;
+	-webkit-box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
+-moz-box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
+box-shadow: 0px 5px 28px 2px rgba(34, 60, 80, 0.38);
+
 	background-image: url(img/blur/07.jpg);
 	background-repeat: no-repeat;
-	background-size: auto;}
+	background-size: auto;
+}
+	
 .sale-4 { grid-area: wide4; 
 	background-image: url(img/blur/08.jpg);
 	background-repeat: no-repeat;
